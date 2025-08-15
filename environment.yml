@@ -1,0 +1,18 @@
+name: hammer-and-anvil
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+  - nvidia
+dependencies:
+  - conda-forge::transformers
+  - pytorch-cuda
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - scipy
+  - pip
+  - pip:
+      - annotated-types
+      - jupyter
+      - matplotlib

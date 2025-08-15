@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python train_grid.py --config_path $1
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python finetune.py --config_path $1
+

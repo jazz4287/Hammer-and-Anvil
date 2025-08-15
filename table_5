@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python multi_seed_runs.py --config_path configs/non_iid/dirichlet_badnet_krum_opt_fine_tune_bisect.yml
+

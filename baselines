@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python train_local.py --config_path configs/local_baselines/table_1_local_finetune_set_train.yml
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python train_local.py --config_path configs/local_baselines/table_2_local_finetune_set_train.yml
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python train_local.py --config_path configs/local_baselines/mnist_local_finetune_set_train.yml

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python train_grid.py --config_path configs/forget_me_not/fmn_badnet.yml
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python finetune.py --config_path configs/forget_me_not/fmn_badnet.yml

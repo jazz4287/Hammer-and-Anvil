@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+yml_files=($(find configs/table_1 -type f -name "*.yml"))
+
+for file in "${yml_files[@]}"; do
+    echo "Processing: $file"
+    CUBLAS_WORKSPACE_CONFIG=:4096:8 python multi_seed_runs.py --config_path "$file"
+done

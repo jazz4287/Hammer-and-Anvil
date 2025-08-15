@@ -1,0 +1,17 @@
+[project]
+name = "hammer-and-anvil"
+version = "0.1.0"
+description = "Package requirements to run the code in this repository."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "annotated-types>=0.7.0",
+    "matplotlib>=3.10.5",
+    "numpy>=2.2.6",
+    "pydantic>=2.11.7",
+    "pyyaml>=6.0.2",
+    "torch>=2.0.0",
+    "torchvision>=0.23.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.55.2",
+]

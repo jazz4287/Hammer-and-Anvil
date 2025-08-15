@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python varying_ft_size_exp.py --config_path configs/varying_ft_size_exp/badnet_krum_opt_fine_tune.yml
