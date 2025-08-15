@@ -1,0 +1,10 @@
+strategy_args:
+  strategy_name: replacement
+
+backdoor_args:
+  attack_type: badnets
+  backdoor_name: single_pixel
+  refresh_backdoor: False
+  trigger_type: single_label
+  target_class: 0
+

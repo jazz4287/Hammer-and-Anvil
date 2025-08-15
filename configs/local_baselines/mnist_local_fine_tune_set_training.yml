@@ -1,0 +1,37 @@
+strategy_args:
+  num_epochs: 100
+  strategy_name: fed_avg
+
+aggregator_args:
+  aggregator_name: mean
+  mean_type: emp
+  fine_tune: 2400
+  fine_tune_epochs: 100
+  fine_tune_clip: -1
+
+backdoor_args:
+  attack_type: badnets
+  backdoor_name: single_pixel
+  k: 0.2
+  refresh_backdoor: False
+  trigger_type: single_label
+  target_class: 0
+
+client_args:
+  model_name: lenet
+  optimizer: sgd
+  num_clients: 20
+  subset_size: 20
+  malicious_lr: 0.02
+  benign_lr: 0.02
+  benign_epoch: 1
+  malicious_epoch: 3
+  num_malicious_clients: 0
+
+env_args:
+  save_path: ./saved_models/mnist/local_finetune_set_training
+  seed: 0
+  batch_size: 64
+  dataset: mnist
+  use_tf32: False
+  eval_batch_size: 10000

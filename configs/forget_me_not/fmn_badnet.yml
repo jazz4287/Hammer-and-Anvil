@@ -1,0 +1,38 @@
+strategy_args:
+  num_epochs: 100
+  strategy_name: fmn
+  fmn_break_point: 10
+  fmn_frequency: 4
+  fmn_interleave_clean_training: False
+  fmn_grad_clipping: 1000
+
+aggregator_args:
+  aggregator_name: mean
+  mean_type: emp
+  fine_tune: 2000
+  fine_tune_epochs: 100
+  fine_tune_clip: -1
+
+backdoor_args:
+  attack_type: badnets
+  backdoor_name: single_pixel
+  k: 0.2
+  refresh_backdoor: False
+  trigger_type: single_label
+  target_class: 0
+
+client_args:
+  model_name: resnet18
+  optimizer: sgd
+  num_clients: 20
+  subset_size: 20
+  benign_epoch: 1
+  malicious_epoch: 1
+
+env_args:
+  save_path: ./saved_models/lr_0_01_ft_2000_k_0_2/fmn_badnet/
+  seed: 0
+  batch_size: 64
+  dataset: cifar10
+  use_tf32: False
+  eval_batch_size: 10000

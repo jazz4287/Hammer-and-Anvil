@@ -1,0 +1,14 @@
+strategy_args:
+  strategy_name: fed_avg
+
+backdoor_args:
+  attack_type: dba
+  backdoor_name: dba
+  k: 0.1  # roughly what they use since they poison 5/64 images every batch
+  refresh_backdoor: True
+  trigger_type: single_label
+  target_class: 0
+
+client_args:
+  dba_single_shot: False
+  dba_param_scaler: 1

@@ -1,0 +1,38 @@
+strategy_args:
+  num_epochs: 100
+  strategy_name: fed_avg
+
+aggregator_args:
+  aggregator_name: krum
+  krum_type: top
+  m_krum: 1
+  fine_tune: 2000
+  fine_tune_epochs: 1
+  fine_tune_clip: -1
+
+backdoor_args:
+  attack_type: badnets
+  backdoor_name: single_pixel
+  k: 0.2
+  refresh_backdoor: False
+  trigger_type: single_label
+  target_class: 0
+
+client_args:
+  model_name: resnet18
+  optimizer: sgd
+  num_clients: 20
+  num_malicious_clients: 0
+  subset_size: 20
+  benign_lr: 0.01
+  malicious_lr: 0.01
+  benign_epoch: 1
+  malicious_epoch: 1
+
+env_args:
+  save_path: ./saved_models/paper_figures/figure_1_clean_only
+  seed: 0
+  batch_size: 64
+  dataset: cifar10
+  use_tf32: False
+  eval_batch_size: 10000

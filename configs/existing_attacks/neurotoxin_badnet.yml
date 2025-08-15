@@ -1,0 +1,13 @@
+strategy_args:
+  strategy_name: fed_avg
+
+backdoor_args:
+  attack_type: neurotoxin
+  backdoor_name: single_pixel
+  refresh_backdoor: False
+  trigger_type: single_label
+  target_class: 0
+
+client_args:
+  neurotoxin_mask_ratio: 0.95  # the paper seems to use 5% the most (TODO: check if it works)
+

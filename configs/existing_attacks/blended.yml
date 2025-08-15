@@ -1,0 +1,9 @@
+strategy_args:
+  strategy_name: fed_avg
+
+backdoor_args:
+  attack_type: static
+  backdoor_name: blended
+  refresh_backdoor: False
+  trigger_type: single_label
+  target_class: 0
