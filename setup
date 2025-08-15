@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+executable_files=("table_1" "table_2" "table_5" "table_6" "baselines" "figure_1" "figure_2" "figure_8" "forget_me_not")
+
+for file in "${executable_files[@]}"; do
+  chmod +x "${file}"
+done
