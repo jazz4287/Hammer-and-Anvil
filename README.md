@@ -97,7 +97,7 @@ To create the figures and tables, run the notebooks/paper_figures.ipynb. If some
 to run the cells requiring them.
 
 
-### Option 2: UV (Recommended)
+## Option 2: UV (Recommended)
 
 First install UV, one way is through pip:
 ```bash
