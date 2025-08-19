@@ -2,4 +2,4 @@
 
 CUBLAS_WORKSPACE_CONFIG=:4096:8 python train_grid.py --config_path ./configs/paper_figures/figure_1.yml
 
-CUBLAS_WORKSPACE_CONFIG=:4096:8 python train_grid.py --config_path configs/paper_figures/figure_1_clean_only.yml
+CUBLAS_WORKSPACE_CONFIG=:4096:8 python train.py --config_path configs/paper_figures/figure_1_clean_only.yml
